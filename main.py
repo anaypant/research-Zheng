@@ -96,7 +96,7 @@ for directory in directories:
             filename = fn.split('_')[0]
             try:
                 path_to_traj = "data/trajectories/"+filename+"_w_centerline.png"
-                path_to_truth = "data/truths/"+filename+"_g_add_filtered.png"
+                path_to_truth = "data/truths/"+path+"/"+filename+"_m.png"
                 path_to_prediction = "data/preds/"+directory+"/"+path+"/"+filename+"_m.png"
                 #get image data, view image with PIL
                 truth = PIL.Image.open(path_to_truth)
