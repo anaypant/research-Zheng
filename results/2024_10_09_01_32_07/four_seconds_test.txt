@@ -1,0 +1,29 @@
+F1 and IoU Scores for four_seconds test
+
+F1 Scores:
+fast cut in: 0.0000
+slow cut in: 0.0489
+same close front: 0.3934
+same leave: 0.3940
+same stable: 0.7260
+next parallel: 0.2854
+next passing: 0.6066
+next passed: 0.8279
+ramp: 0.0227
+opposite: 0.6883
+crossing: 0.6228
+turning: 0.0305
+
+IoU Scores:
+fast cut in: 0.0000
+slow cut in: 0.0251
+same close front: 0.2449
+same leave: 0.2453
+same stable: 0.5698
+next parallel: 0.1665
+next passing: 0.4354
+next passed: 0.7064
+ramp: 0.0115
+opposite: 0.5247
+crossing: 0.4523
+turning: 0.0155
