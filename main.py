@@ -94,29 +94,50 @@ for directory in directories:
         cbar_ax = fig.add_subplot(gs[1, 2])
         fig.colorbar(disp.im_, cax=cbar_ax)
 
-        # seaborne kdeplot pred (x axis)
-        ax_hist_x = fig.add_subplot(gs[2, 1])
-        sns.kdeplot([list_of_motion_classes.index(x) for x in pred_m], bw_adjust=1.5, fill=True, ax=ax_hist_x, color='skyblue')
-        ax_hist_x.axvline(np.mean([list_of_motion_classes.index(x) for x in pred_m]), color='red', linestyle='dashed', linewidth=2)
-        ax_hist_x.set_ylabel('Density')
-        ax_hist_x.set_yticklabels([])
-        
-        # seaborne kdeplot truth (y axis)
-        ax_hist_y = fig.add_subplot(gs[1, 0])
-        sns.kdeplot([list_of_motion_classes.index(x) for x in true_m], bw_adjust=1.5, fill=True, ax=ax_hist_y, color='skyblue', vertical=True, clip=None)
-        ax_hist_y.axhline(np.mean([list_of_motion_classes.index(x) for x in true_m]), color='red', linestyle='dashed', linewidth=2)
-        ax_hist_y.set_xlabel('Density')
-        ax_hist_y.set_xticklabels([])  # This removes the vertical axis labels
+        # for each of the tick labels, add the frequency to the label text (number of my occurrences / total number of occurences)
+        # do for both pred and true
+        #     ax_cm.set_xticklabels([f"{label} {round((cm[:, i].sum()/cm.sum(),* 100), 3)}%" for i, label in enumerate(list_of_motion_classes)], rotation=90)
+        # ax_cm.set_yticklabels([f"{label} {round((cm[i, :].sum()/cm.sum(),* 100), 3)}%" for i, label in enumerate(list_of_motion_classes)])
+        newX = []
+        newY = []
+        for i, label in enumerate(list_of_motion_classes):
+            newX.append(f"{label} {round((cm[:, i].sum()/cm.sum()*100), distribution_round_to)}%")
+            newY.append(f"{label} {round((cm[i, :].sum()/cm.sum()*100), distribution_round_to)}%")
+        ax_cm.set_xticklabels(newX, rotation=90)
+        ax_cm.set_yticklabels(newY)
+            
+
+
+        if (kdeplots) :
+            # seaborne kdeplot pred (x axis)
+            ax_hist_x = fig.add_subplot(gs[2, 1])
+            sns.kdeplot([list_of_motion_classes.index(x) for x in pred_m], bw_adjust=1.5, fill=True, ax=ax_hist_x, color='skyblue')
+            ax_hist_x.axvline(np.mean([list_of_motion_classes.index(x) for x in pred_m]), color='red', linestyle='dashed', linewidth=2)
+            ax_hist_x.set_ylabel('Density')
+            ax_hist_x.set_yticklabels([])
+            
+            # seaborne kdeplot truth (y axis)
+            ax_hist_y = fig.add_subplot(gs[1, 0])
+            sns.kdeplot([list_of_motion_classes.index(x) for x in true_m.reverse()], bw_adjust=1.5, fill=True, ax=ax_hist_y, color='skyblue', vertical=True, clip=None)
+            ax_hist_y.axhline(np.mean([list_of_motion_classes.index(x) for x in true_m]), color='red', linestyle='dashed', linewidth=2)
+            ax_hist_y.set_xlabel('Density')
+            ax_hist_y.set_xticklabels([])  # This removes the vertical axis labels
 
 
         # Set colors of confusion matrix x-axis
         for label in ax_cm.get_xticklabels():
             label_text = label.get_text()
+            label_textL = label_text.split(" ")[:-1]
+            # Remove the percentage
+            label_text = " ".join(label_textL)
             label.set_color(label_colors.get(label_text, 'black'))  # Default to black if no color found
 
         # Apply custom colors to y-tick labels
         for label in ax_cm.get_yticklabels():
             label_text = label.get_text()
+            label_textL = label_text.split(" ")[:-1]
+            # Remove the percentage
+            label_text = " ".join(label_textL)
             label.set_color(label_colors.get(label_text, 'black'))  # Default to black if no color found
 
 

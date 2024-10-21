@@ -1,0 +1,29 @@
+F1 and IoU Scores for test_seconds test
+
+F1 Scores:
+fast cut in: 0.0000
+slow cut in: 0.0000
+same close front: 0.0476
+same leave: 0.0000
+same stable: 0.8669
+next parallel: 0.4775
+next passing: 0.5969
+next passed: 0.7940
+ramp: 0.0000
+opposite: 0.6756
+crossing: 0.0000
+turning: 0.1538
+
+IoU Scores:
+fast cut in: 0.0000
+slow cut in: 0.0000
+same close front: 0.0244
+same leave: 0.0000
+same stable: 0.7650
+next parallel: 0.3136
+next passing: 0.4254
+next passed: 0.6584
+ramp: 0.0000
+opposite: 0.5101
+crossing: 0.0000
+turning: 0.0833

@@ -5,7 +5,10 @@ RED_GREEN = True
 
 # Possible maplotlib color maps: https://matplotlib.org/stable/tutorials/colors/colormaps.html
 COLOR = "Reds"
-TEST = False
+TEST = True
+kdeplots = False
+distribution_round_to=1
+label_count_trajectory = True
 
 motion_classes = {
     (255, 140, 0):"fast cut in",
@@ -22,6 +25,9 @@ motion_classes = {
     (0, 255, 255):"turning",
     # (0,0,0): "background"
 }
+
+# change 
+
 label_colors = {
     "fast cut in": "orange",        # (255, 140, 0)
     "slow cut in": "darkorange",    # (255, 165, 0)
