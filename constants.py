@@ -5,7 +5,7 @@ RED_GREEN = True
 
 # Possible maplotlib color maps: https://matplotlib.org/stable/tutorials/colors/colormaps.html
 COLOR = "Reds"
-TEST = False
+TEST = True
 kdeplots = False
 distribution_round_to=1
 label_count_trajectory = False
@@ -23,6 +23,7 @@ motion_classes = {
     (128, 0, 128):"opposite",
     (0, 0, 255):"crossing",
     (0, 255, 255):"turning",
+    (128, 128, 128):"ego action"
     # (0,0,0): "background"
 }
 
@@ -40,7 +41,8 @@ label_colors = {
     "ramp": "mediumseagreen",       # (60, 179, 113)
     "opposite": "purple",           # (128, 0, 128)
     "crossing": "blue",             # (0, 0, 255)
-    "turning": "cyan"               # (0, 255, 255)
+    "turning": "cyan",               # (0, 255, 255)
+    "ego action": "gray"            # (128, 128, 128)
 }
 
 
