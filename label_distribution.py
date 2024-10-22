@@ -99,7 +99,7 @@ for directory in directories:
         plt.ylabel("Frequency")
         # make sure none of the tick labels are cut off
         plt.tight_layout()
-        
+
 
         # title
         # if trajectory based, add 'trajectory-based'
@@ -120,12 +120,26 @@ for directory in directories:
         
         # save it in subfolder with timestamp
         if not os.path.exists("label_distribution/"+current_date):
-            os.makedirs("label_distribution/"+current_date)
-        plt.savefig("label_distribution/"+current_date+"/"+directory+"_"+path+".png")
+            # create the folder based on the type
+            if label_count_trajectory:
+                os.makedirs("label_distribution/"+current_date+"/trajectory_based")
+            else:
+                os.makedirs("label_distribution/"+current_date+"/area_based")
+        if label_count_trajectory:
+            plt.savefig("label_distribution/"+current_date+"/trajectory_based/"+directory+"_"+path+"_trajectory_based.png")
+        else:
+            plt.savefig("label_distribution/"+current_date+"/area_based/"+directory+"_"+path+"_area_based.png")
         plt.close()
 
         # save the counts to a txt file in the same folder
-        with open("label_distribution/"+current_date+"/"+directory+"_"+path+".txt", "w") as f:
-            for label in labels:
-                f.write(f"{motion_classes[label]}: {labels[label]}\n")
-        
+        if label_count_trajectory:
+            with open("label_distribution/"+current_date+"/trajectory_based/"+directory+"_"+path+"_trajectory_based.txt", "w") as f:
+                # write the labels dictionary to the file nicely
+                for key in labels:
+                    # write the motion class of the key
+                    f.write(motion_classes[key] + ": " + str(labels[key]) + "\n")
+        else:
+            with open("label_distribution/"+current_date+"/area_based/"+directory+"_"+path+"_area_based.txt", "w") as f:
+                for key in labels:
+                    # write the motion class of the key
+                    f.write(motion_classes[key] + ": " + str(labels[key]) + "\n")

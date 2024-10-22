@@ -1,0 +1,12 @@
+fast cut in: 5
+slow cut in: 771
+same close front: 1406
+same leave: 1234
+same stable: 13279
+next parallel: 14510
+next passing: 13559
+next passed: 105548
+ramp: 0
+opposite: 80570
+crossing: 431
+turning: 372
