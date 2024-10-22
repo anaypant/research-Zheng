@@ -1,0 +1,13 @@
+fast cut in: 3372
+slow cut in: 54815
+same close front: 246189
+same leave: 231617
+same stable: 1125344
+next parallel: 1211251
+next passing: 2412919
+next passed: 5304177
+ramp: 144675
+opposite: 1880929
+crossing: 265218
+turning: 50558
+ego action: 1115766

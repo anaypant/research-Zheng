@@ -5,7 +5,7 @@ RED_GREEN = True
 
 # Possible maplotlib color maps: https://matplotlib.org/stable/tutorials/colors/colormaps.html
 COLOR = "Reds"
-TEST = True
+TEST = False
 kdeplots = False
 distribution_round_to=1
 label_count_trajectory = False

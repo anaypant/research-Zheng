@@ -1,0 +1,31 @@
+F1 and IoU Scores for four_seconds train
+
+F1 Scores:
+fast cut in: 0.6531
+slow cut in: 0.8728
+same close front: 0.9196
+same leave: 0.9141
+same stable: 0.9856
+next parallel: 0.9699
+next passing: 0.9744
+next passed: 0.9658
+ramp: 0.9839
+opposite: 0.9371
+crossing: 0.8739
+turning: 0.8564
+ego action: 0.9305
+
+IoU Scores:
+fast cut in: 0.4848
+slow cut in: 0.7744
+same close front: 0.8511
+same leave: 0.8419
+same stable: 0.9716
+next parallel: 0.9416
+next passing: 0.9502
+next passed: 0.9339
+ramp: 0.9683
+opposite: 0.8817
+crossing: 0.7760
+turning: 0.7488
+ego action: 0.8700

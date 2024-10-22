@@ -1,0 +1,31 @@
+F1 and IoU Scores for one_second test
+
+F1 Scores:
+fast cut in: 1.0000
+slow cut in: 1.0000
+same close front: 1.0000
+same leave: 1.0000
+same stable: 1.0000
+next parallel: 1.0000
+next passing: 1.0000
+next passed: 1.0000
+ramp: 1.0000
+opposite: 1.0000
+crossing: 1.0000
+turning: 1.0000
+ego action: 1.0000
+
+IoU Scores:
+fast cut in: 1.0000
+slow cut in: 1.0000
+same close front: 1.0000
+same leave: 1.0000
+same stable: 1.0000
+next parallel: 1.0000
+next passing: 1.0000
+next passed: 1.0000
+ramp: 1.0000
+opposite: 1.0000
+crossing: 1.0000
+turning: 1.0000
+ego action: 1.0000
