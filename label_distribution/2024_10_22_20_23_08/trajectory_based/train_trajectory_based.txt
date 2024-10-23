@@ -1,0 +1,13 @@
+fast cut in: 0
+slow cut in: 8
+same close front: 120
+same leave: 86
+same stable: 259
+next parallel: 515
+next passing: 685
+next passed: 1501
+ramp: 58
+opposite: 809
+crossing: 145
+turning: 30
+ego action: 460

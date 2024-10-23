@@ -10,3 +10,4 @@ ramp: 3224
 opposite: 272110
 crossing: 11018
 turning: 2531
+ego action: 19874

@@ -1,0 +1,13 @@
+fast cut in: 0
+slow cut in: 2
+same close front: 8
+same leave: 5
+same stable: 33
+next parallel: 7
+next passing: 59
+next passed: 106
+ramp: 1
+opposite: 87
+crossing: 0
+turning: 1
+ego action: 5
